@@ -1,0 +1,31 @@
+declare
+  a int ;
+  b int;
+  c int ;
+begin 
+  a:=&a;
+  b:=&b;
+  c:=&c;
+  if a>b and a>c then 
+     dbms_output.put_line(a|| 'is greater than '||b|| 'and '||c);
+  else if b>a and b>c then
+     dbms_output.put_line(b|| 'is greater than '||a|| 'and '||c);
+  else 
+     dbms_output.put_line(c|| 'is greater than '||a|| 'and '||b);
+  end if;
+  end if;
+end;
+/
+OUTPUT:
+-----------------------------------------
+Enter value for a: 3
+old   6:   a:=&a;
+new   6:   a:=3;
+Enter value for b: 4
+old   7:   b:=&b;
+new   7:   b:=4;
+Enter value for c: 5
+old   8:   c:=&c;
+new   8:   c:=5;
+5is greater than 3and 4
+----------------------------------------------------
